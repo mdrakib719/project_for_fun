@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to right, #dbc6c1, #daad8a);
+        font-family: Arial, sans-serif;
+      }
+      .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        width: 400px;
+      }
+      img {
+        width: 100%;
+        border-radius: 10px;
+        transition: 0.5s ease;
+      }
+      .controls {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .controls button {
+        background: #ff7e5f;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1.2em;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .controls button:hover {
+        background: #e06c56;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <h2>Image Gallery</h2>
+      <img id="gallery-image" src="img/img_1.jpg" alt="Gallery Image" />
+      <div class="controls">
+        <button onclick="prevImage()">⏮️</button>
+        <button onclick="nextImage()">⏭️</button>
+      </div>
+    </div>
+
+    <script>
+      const images = [
+        "img/img_1.jpg",
+        "img/img_2.jpg",
+        "img/img_3.jpg",
+        "img/img_4.jpg",
+        "img/img_5.jpg",
+        "img/img_6.jpg",
+        "img/img_7.jpg",
+        "img/img_8.jpg",
+      ];
+      let currentIndex = 0;
+      const galleryImage = document.getElementById("gallery-image");
+
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        galleryImage.src = images[currentIndex];
+      }
+
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        galleryImage.src = images[currentIndex];
+      }
+    </script>
+  </body>
+</html>
