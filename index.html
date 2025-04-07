@@ -24,9 +24,20 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       }
 
-      h1 {
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #4caf50;
+        margin-bottom: 20px;
+      }
+
+      #welcome-message {
         margin-bottom: 30px;
         color: #333;
+        font-size: 28px;
+        min-height: 40px;
       }
 
       a {
@@ -48,10 +59,27 @@
   </head>
   <body>
     <div class="container">
-      <h1>Welcome</h1>
+      <img src="img/img_3.jpg" alt="Profile Picture" class="profile-pic" />
+      <h1 id="welcome-message"></h1>
       <a href="calculator.html">Open Calculator</a>
       <a href="image_gallary.html">View Image Gallery</a>
       <a href="text.html">View Image Dynamic Gallery</a>
     </div>
+
+    <script>
+      const text = "Hi!! Welcome to my website";
+      const message = document.getElementById("welcome-message");
+      let index = 0;
+
+      function typeLetter() {
+        if (index < text.length) {
+          message.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeLetter, 150); // typing speed
+        }
+      }
+
+      window.onload = typeLetter;
+    </script>
   </body>
 </html>
