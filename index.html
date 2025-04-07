@@ -3,86 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home Page</title>
     <style>
-      * {
+      body {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: #d2d2d2;
-        background-image: repeating-linear-gradient(
-            to right,
-            transparent 0 100px,
-            #25283b22 100px 101px
-          ),
-          repeating-linear-gradient(
-            to bottom,
-            transparent 0 100px,
-            #25283b22 100px 101px
-          );
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #74ebd5, #acb6e5);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
-      body::before {
-        position: absolute;
-        width: min(1400px, 90vw);
-        top: 10%;
-        left: 50%;
-        height: 90%;
-        transform: translateX(-50%);
-        content: "";
-        background-image: url(images/bg.png);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position: top center;
-        pointer-events: none;
+      .container {
+        text-align: center;
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      a {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 25px;
+        font-size: 16px;
+        text-decoration: none;
+        color: white;
+        background-color: #4caf50;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #388e3c;
       }
     </style>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="banner">
-      <div class="slider" style="--quantity: 10">
-        <div class="item" style="--position: 1">
-          <img src="/img/img_1.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 2">
-          <img src="/img/img_2.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 3">
-          <img src="/img/img_3.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 4">
-          <img src="/img/img_4.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 5">
-          <img src="/img/img_5.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 6">
-          <img src="/img/img_6.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 7">
-          <img src="/img/img_7.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 8">
-          <img src="/img/img_8.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 9">
-          <img src="/img/img_7.jpg" alt="" />
-        </div>
-        <div class="item" style="--position: 10">
-          <img src="/img/img_3.jpg" alt="" />
-        </div>
-      </div>
-      <div class="content">
-        <h1 data-content="CSS ONLY">RAKIB</h1>
-        <div class="author">
-          <h2></h2>
-          <p><b>Gallary </b></p>
-          <p>Make it for fun purpose</p>
-        </div>
-      </div>
+    <div class="container">
+      <h1>Welcome</h1>
+      <a href="calculator.html">Open Calculator</a>
+      <a href="image_gallary.html">View Image Gallery</a>
+      <a href="text.html">View Image Dynamic Gallery</a>
     </div>
   </body>
 </html>
