@@ -19,8 +19,3 @@ A **Modern Card-Style Image Gallery** built with **HTML**, **CSS**, and **JavaSc
 
 To get a local copy up and running follow these simple steps:
 
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/image-gallery.git
